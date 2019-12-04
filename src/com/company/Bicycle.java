@@ -1,6 +1,8 @@
 package com.company;
 
 
+import java.util.Scanner;
+
 public class Bicycle {
     private String name;
     private String type;
@@ -13,6 +15,11 @@ public class Bicycle {
     private String breakType;
     private float price;
     private static final int MAX_SPEED = 70;
+    private boolean right;
+    private boolean straight;
+    private boolean left;
+
+
 
     public Bicycle() {
         name = "Default Name";
@@ -23,6 +30,7 @@ public class Bicycle {
         hasBreak = true;
         breakType = "Disc";
         System.out.println("Created new bike with name:" + name + " and type: " + type);
+        straight=true;
     }
 
     public void start() {
@@ -79,4 +87,49 @@ public class Bicycle {
         }
         System.out.println("Accelerate to: " + speed);
     }
-}
+
+    public void turnLeft() {
+
+            left = true;
+            straight = false;
+            right = false;
+
+    }
+        public void turnRight () {
+
+                right = true;
+                left = false;
+                straight=false;
+
+
+        }
+
+        public void setInfo(){
+
+            Scanner myObj = new Scanner(System.in);
+            String bikeName;
+            String color;
+            String wheelsQuantity;
+            String price;
+
+
+            System.out.println("Enter bike name");
+            bikeName = myObj.nextLine();
+            System.out.println("Enter bike color");
+            color = myObj.nextLine();
+            System.out.println("Enter bike wheels quantity");
+
+            wheelsQuantity = myObj.nextLine();
+
+            System.out.println("Enter bike price");
+            price = myObj.nextLine();
+
+
+
+
+
+
+
+
+        }
+    }
