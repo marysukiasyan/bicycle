@@ -109,8 +109,8 @@ public class Bicycle {
             Scanner myObj = new Scanner(System.in);
             String bikeName;
             String color;
-            String wheelsQuantity;
-            String price;
+            int wheelsQuantity;
+            float price;
 
 
             System.out.println("Enter bike name");
@@ -119,10 +119,19 @@ public class Bicycle {
             color = myObj.nextLine();
             System.out.println("Enter bike wheels quantity");
 
-            wheelsQuantity = myObj.nextLine();
+            wheelsQuantity = myObj.nextInt();
 
             System.out.println("Enter bike price");
-            price = myObj.nextLine();
+            price = myObj.nextFloat();
+
+
+
+
+
+
+
+
+
 
 
 
